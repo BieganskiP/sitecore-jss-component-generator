@@ -19,11 +19,11 @@
   "publisher": "your-publisher-id",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/sitecore-jss-component-generator"
+    "url": "https://github.com/bieganskip/sitecore-jss-component-generator"
   },
-  "homepage": "https://github.com/your-username/sitecore-jss-component-generator#readme",
+  "homepage": "https://github.com/bieganskip/sitecore-jss-component-generator#readme",
   "bugs": {
-    "url": "https://github.com/your-username/sitecore-jss-component-generator/issues"
+    "url": "https://github.com/bieganskip/sitecore-jss-component-generator/issues"
   },
   "license": "MIT",
   "keywords": [
