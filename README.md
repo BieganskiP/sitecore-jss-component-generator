@@ -66,9 +66,9 @@ export type HeroBannerProps = ComponentProps & {
   fields: HeroBannerFields;
 };
 
-const HeroBanner = (props: HeroBannerProps): JSX.Element => {
+const HeroBanner = (props: HeroBannerProps) => {
   return (
-    <div className="herobanner">
+    <div id="herobanner">
       <Text field={props.fields.title} tag="h1" />
       <Text field={props.fields.subtitle} tag="h2" />
       <Image field={props.fields.image} />

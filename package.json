@@ -2,21 +2,19 @@
   "name": "sitecore-jss-component-generator",
   "displayName": "Sitecore JSS Component Generator",
   "description": "Generate Sitecore JSS React components with TypeScript support",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
-    "vscode": "^1.103.0"
+    "vscode": "^1.74.0"
   },
   "categories": [
+    "Snippets",
     "Other"
-  ],
-  "activationEvents": [
-    "*"
   ],
   "galleryBanner": {
     "color": "#0078d4",
     "theme": "dark"
   },
-  "publisher": "your-publisher-id",
+  "publisher": "PatrykBiegaski",
   "repository": {
     "type": "git",
     "url": "https://github.com/bieganskip/sitecore-jss-component-generator"
@@ -67,7 +65,7 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.103.0",
+    "@types/vscode": "^1.74.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "22.x",
     "@typescript-eslint/eslint-plugin": "^8.39.0",
