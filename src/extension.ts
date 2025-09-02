@@ -192,10 +192,12 @@ export function activate(context: vscode.ExtensionContext) {
         parsed = parseFieldsInput(fieldsInput);
       }
 
-      // read config for ComponentProps import path
+      // read config for ComponentProps import path and components path
       const config = vscode.workspace.getConfiguration("sitecoreJss");
       const importPath =
         config.get<string>("componentPropsImportPath") || "lib/component-props";
+      const componentsPath =
+        config.get<string>("componentsPath") || "src/components";
 
       const source = generateComponentSource(
         name,
@@ -215,8 +217,7 @@ export function activate(context: vscode.ExtensionContext) {
           // Create variant in the same folder as main component
           dirUri = vscode.Uri.joinPath(
             root,
-            "src",
-            "components",
+            ...componentsPath.split("/"),
             mainComponentName
           );
           fileName = `${variantName}Variant.tsx`;
@@ -246,7 +247,11 @@ export function activate(context: vscode.ExtensionContext) {
           }
         } else {
           // Create new component
-          dirUri = vscode.Uri.joinPath(root, "src", "components", name);
+          dirUri = vscode.Uri.joinPath(
+            root,
+            ...componentsPath.split("/"),
+            name
+          );
           await vscode.workspace.fs.createDirectory(dirUri);
           fileName = `${name}.tsx`;
           fileUri = vscode.Uri.joinPath(dirUri, fileName);

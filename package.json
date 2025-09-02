@@ -2,7 +2,7 @@
   "name": "sitecore-jss-component-generator",
   "displayName": "Sitecore JSS Component Generator",
   "description": "Generate Sitecore JSS React components with TypeScript support",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -49,6 +49,11 @@
           "type": "string",
           "default": "lib/component-props",
           "description": "Import path for your ComponentProps type (e.g. lib/component-props)."
+        },
+        "sitecoreJss.componentsPath": {
+          "type": "string",
+          "default": "src/components",
+          "description": "Base path where components should be created (e.g. src/components, components, app/components)."
         }
       }
     }
